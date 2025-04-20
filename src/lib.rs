@@ -27,7 +27,7 @@ extern crate log;
 extern crate backtrace;
 
 use std::{fmt, panic, thread};
-
+use log::Log;
 use backtrace::Backtrace;
 
 #[cfg(not(feature = "with-backtrace"))]
@@ -144,6 +144,8 @@ impl Config {
                     Shim(backtrace)
                 ),
             }
+
+            log::logger().flush();
         }));
     }
 }

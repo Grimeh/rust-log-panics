@@ -9,6 +9,7 @@ readme = "README.md"
 
 [features]
 with-backtrace = ["backtrace"]
+flush = []
 
 [dependencies]
 log = "0.4"
